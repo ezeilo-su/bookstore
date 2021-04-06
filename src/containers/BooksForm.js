@@ -20,12 +20,16 @@ export default function BooksForm({ handleOnCreateBook }) {
 
   function handleOnSubmit(e) {
     e.preventDefault();
+    if (!(state.title && state.category)) {
+      return;
+    }
     const book = {
       id: Math.floor(Math.random() * 100),
       title: state.title,
       category: state.category,
     };
     handleOnCreateBook(book);
+    document.getElementById('new-book-form').reset();
     setState((prevState) => ({ ...prevState, category: '', title: '' }));
   }
 
