@@ -5,7 +5,7 @@ import '../styles/booklist.css';
 
 export default function BooksList({ booksList, handleOnRemoveBook }) {
   return (
-    <div>
+    <div className="book-list">
       <table style={{ width: '100%' }}>
         <thead>
           <tr>
