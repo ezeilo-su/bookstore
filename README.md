@@ -1,6 +1,6 @@
 # Bookstore CMS
 
-In this milestone, we completed the following tasks:
+In this milestone, I completed the following tasks:
 
 - Create ```container``` components: ```BooksList``` and ```BooksForm```.
 
