@@ -25,6 +25,7 @@ export default function BooksForm({ handleOnCreateBook }) {
       category: state.category,
     };
     handleOnCreateBook(book);
+    setState((prevState) => ({ ...prevState, category: '', title: '' }));
   }
 
   return (
@@ -36,7 +37,7 @@ export default function BooksForm({ handleOnCreateBook }) {
           <option selected disabled>Select a category</option>
           {bookCategories.map((item) => <option value={item} key={`${item}_option`}>{item}</option>)}
         </select>
-        <button className="btn" type="submit">Add Book</button>
+        <button className="btn btn-primary" type="submit">Add Book</button>
       </form>
     </div>
   );
