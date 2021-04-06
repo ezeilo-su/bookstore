@@ -2,13 +2,17 @@
 
 In this milestone, we completed the following tasks:
 
-- Create a new Bookstore app in React using ```create-react-app```.
+- Create ```container``` components: ```BooksList``` and ```BooksForm```.
 
-- Install app dependencies (```npm install --save prop-types``` ```npm install react-redux``` ```npm install redux```).
+- Create ```presentational``` components: ```App``` and ```Book```.
 
-- Setup ```eslint```, ```stylelint```, ```github workflows```.
+- Create Redux ```actions``` and ```reducers```: ```CREATE_BOOK``` and ```REMOVE_BOOK```.
 
-- Deploy app on ```heroku```.
+- Connect the ```App``` Components to redux store.
+
+- Render ```BookForm``` and ```BookList``` components in the root component (App).
+
+- Deploy the App on Heroku.
 
 
 ## 📝 Setup
@@ -38,20 +42,13 @@ You will also see any lint errors in the console.
 ### Check out live demo [here](https://reactredux-bookstore.herokuapp.com/)
 
 
-## Authors
+## Author
 
 👤 **Sunday Uche Ezeilo**
 
 - Github: [@sundayezeilo](https://github.com/ezeilo-su)
 - Twitter: [@SundayEzeilo](https://twitter.com/SundayEzeilo)
 - Linkedin: [Sunday Ezeilo](https://www.linkedin.com/in/sundayezeilo/)
-
-
-👤 **José Pedraza**
-
-- Github: [@pastorp3](https://github.com/pastorp3)
-- Twitter: [@jose_pastor](https://twitter.com/jose_pastorp3 )
-- Linkedin: [linkedin](https://www.linkedin.com/in/jos%C3%A9-pedraza-acevedo-ab700a1a9/)
 
 
 ## 🤝 Contributing
