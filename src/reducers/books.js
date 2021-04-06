@@ -30,7 +30,7 @@ const bookReducer = (state = initialBookState, { type, payload }) => {
         bookList: [...state.bookList, payload],
       };
     case 'REMOVE_BOOK': {
-      const newBooklist = state.bookList.filter((book) => book.id === payload.id);
+      const newBooklist = state.bookList.filter((book) => book.id !== payload.id);
 
       return {
         ...state,
