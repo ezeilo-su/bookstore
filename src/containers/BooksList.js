@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import '../styles/booklist.css';
 
 export default function BooksList({ booksList, handleOnRemoveBook }) {
   return (
@@ -10,7 +11,7 @@ export default function BooksList({ booksList, handleOnRemoveBook }) {
           <tr>
             <th>Book Id</th>
             <th>Title</th>
-            <th>Category</th>
+            <th colSpan="2">Category</th>
           </tr>
         </thead>
         <tbody>

@@ -1,15 +1,9 @@
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-th,
-td {
-  padding: 15px;
-}
-
-th {
-  text-align: left;
+.App {
+  padding: 30px;
 }
