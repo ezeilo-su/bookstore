@@ -15,5 +15,6 @@ td {
 }
 
 table {
+  width: 100%;
   border-spacing: 5px;
 }
