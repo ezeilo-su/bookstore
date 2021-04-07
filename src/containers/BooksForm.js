@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 import '../styles/bookform.css';
 
 const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-export default function BooksForm() {
-  const dispatch = useDispatch();
-
+function BooksForm({ onCreateBook }) {
   const [state, setState] = useState({
     title: '',
     category: '',
@@ -31,7 +30,7 @@ export default function BooksForm() {
       title: state.title,
       category: state.category,
     };
-    dispatch(createBook(book));
+    onCreateBook(book);
     document.getElementById('new-book-form').reset();
     setState((prevState) => ({ ...prevState, category: '', title: '' }));
   }
@@ -50,3 +49,13 @@ export default function BooksForm() {
     </div>
   );
 }
+
+const mapDispatchToProps = {
+  onCreateBook: createBook,
+};
+
+BooksForm.propTypes = {
+  onCreateBook: PropTypes.func.isRequired,
+};
+
+export default connect(null, mapDispatchToProps)(BooksForm);
