@@ -8,7 +8,8 @@ import CategoryFilter from '../components/CategoryFilter';
 export default function BooksList() {
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filter);
-  const bookList = (filter === 'All' ? useSelector((state) => state.books)
+
+  const fetchBook = () => (filter === 'All' ? useSelector((state) => state.books)
     : useSelector((state) => state.books).filter((book) => book.category === filter));
 
   function handleOnRemove(book) {
@@ -32,7 +33,7 @@ export default function BooksList() {
           </tr>
         </thead>
         <tbody>
-          {bookList.map((book, idx) => (
+          {fetchBook().map((book, idx) => (
             <Book book={book} onRemoveBook={handleOnRemove} key={`item${idx + 1}`} />
           ))}
         </tbody>
