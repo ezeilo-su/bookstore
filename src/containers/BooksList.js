@@ -1,15 +1,13 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { removeBook } from '../actions/index';
 import Book from '../components/Book';
 import '../styles/booklist.css';
 
-export default function BooksList() {
-  const dispatch = useDispatch();
-  const bookList = useSelector((state) => state.books);
-
+function BooksList({ books, onRemoveBook }) {
   function handleOnRemove(book) {
-    dispatch(removeBook(book));
+    onRemoveBook(book);
   }
 
   return (
@@ -24,7 +22,7 @@ export default function BooksList() {
           </tr>
         </thead>
         <tbody>
-          {bookList.map((book, idx) => (
+          {books.map((book, idx) => (
             <Book book={book} onRemoveBook={handleOnRemove} key={`item${idx + 1}`} />
           ))}
         </tbody>
@@ -32,3 +30,18 @@ export default function BooksList() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => ({
+  books: state.books,
+});
+
+const mapDispatchToProps = {
+  onRemoveBook: removeBook,
+};
+
+BooksList.propTypes = {
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onRemoveBook: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
