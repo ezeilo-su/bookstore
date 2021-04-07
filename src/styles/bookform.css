@@ -1,5 +1,9 @@
-#new-book-form {
+.book-form {
   margin-top: 20px;
+}
+
+#new-book-form {
+  margin-top: 10px;
 }
 
 .btn {
