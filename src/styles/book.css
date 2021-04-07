@@ -1,4 +1,5 @@
-/* th,
-td {
-  padding: 15px;
-} */
+
+td.book-id,
+td.remove-book {
+  text-align: center;
+}
