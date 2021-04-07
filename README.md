@@ -4,15 +4,19 @@
 
 In this milestone, I completed the following tasks:
 
-- Create ```container``` components: ```BooksList``` and ```BooksForm```.
+- Add a new ```presentational``` component: ```CategoryFilter```.
 
-- Create ```presentational``` components: ```App``` and ```Book```.
+- Create the ```CHANGE_FILTER``` action in ```actions/index.js```.
 
-- Create Redux ```actions``` and ```reducers```: ```CREATE_BOOK``` and ```REMOVE_BOOK```.
+- Create a ```filter.js``` reducer which modifies ```filter``` in the Redux store.
 
-- Connect the ```App``` Components to redux store.
+- Implement the ```CategoryFilter``` component.
 
-- Render ```BookForm``` and ```BookList``` components in the root component (App).
+- Render the ```CategoryFilter``` component in the ```BooksList``` component.
+
+- Implement the ```handleFilterChange``` method which modifies the filter state in the Redux store.
+
+- Implement a conditional method which decides which books should be shown in the table depending on the ```filter``` value from Redux store.
 
 - Deploy the App on Heroku.
 
