@@ -4,8 +4,8 @@ import BooksList from '../containers/BooksList';
 
 const App = () => (
   <div className="App">
-    <BookForm />
     <BooksList />
+    <BookForm />
   </div>
 );
 

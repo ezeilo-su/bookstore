@@ -14,6 +14,7 @@ export default function BooksList() {
 
   return (
     <div className="book-list">
+      <h1>Book Store</h1>
       <table>
         <thead>
           <tr>

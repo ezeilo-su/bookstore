@@ -37,8 +37,8 @@ export default function BooksForm() {
   }
 
   return (
-    <div>
-      <h1>Add New Book</h1>
+    <div className="book-form">
+      <h3>Add New Book</h3>
       <form onSubmit={handleOnSubmit} id="new-book-form">
         <input value={state.title} type="text" name="title" onChange={handleOnChange} placeholder="Book Title" />
         <select name="categories" onChange={handleOnChange}>
