@@ -16,9 +16,9 @@ In this milestone, I completed the following tasks:
 
 - Implement the ```handleFilterChange``` method which modifies the filter state in the Redux store.
 
-- Implement a conditional method which decides which books should be shown in the table depending on the ```filter``` value from Redux store.
+- Implement a conditional method that decides which books should be shown in the table depending on the ```filter``` value from the Redux store.
 
-- Deploy the App on Heroku.
+- Deploy the app on Heroku.
 
 
 ## 📝 Setup
