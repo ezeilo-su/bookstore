@@ -4,19 +4,7 @@
 
 ##### In this milestone, I completed the following tasks:
 
-- Add a new ```presentational``` component: ```CategoryFilter```.
-
-- Create the ```CHANGE_FILTER``` action in ```actions/index.js```.
-
-- Create a ```filter.js``` reducer which modifies ```filter``` in the Redux store.
-
-- Implement the ```CategoryFilter``` component.
-
-- Render the ```CategoryFilter``` component in the ```BooksList``` component.
-
-- Implement the ```handleFilterChange``` method which modifies the filter state in the Redux store.
-
-- Implement a conditional method that decides which books should be shown in the table depending on the ```filter``` value from the Redux store.
+- Implement the design UI provided by the Zeplin project.
 
 - Deploy the app on Heroku.
 
