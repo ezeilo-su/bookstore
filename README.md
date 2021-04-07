@@ -2,7 +2,7 @@
 
 ![main page](src/screenshot.png)
 
-In this milestone, I completed the following tasks:
+##### In this milestone, I completed the following tasks:
 
 - Add a new ```presentational``` component: ```CategoryFilter```.
 
