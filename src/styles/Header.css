@@ -28,3 +28,8 @@
   letter-spacing: 1.9px;
   color: #121212;
 }
+
+.user-profile img {
+  width: 45px;
+  height: 45px;
+}
