@@ -1,6 +1,6 @@
 # Bookstore CMS - React-Redux App
 
-![main page](src/main.png)
+![main page](src/screenshot.png)
 
 In this milestone, I completed the following tasks:
 
