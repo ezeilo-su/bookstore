@@ -6,7 +6,7 @@ import '../styles/booklist.css';
 
 export default function BooksList() {
   const dispatch = useDispatch();
-  const bookList = useSelector((state) => state.books.bookList);
+  const bookList = useSelector((state) => state.books);
 
   function handleOnRemove(book) {
     dispatch(removeBook(book));
