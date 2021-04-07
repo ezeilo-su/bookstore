@@ -1,9 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeBook } from '../actions/index';
 import Book from '../components/Book';
 import '../styles/booklist.css';
 
-export default function BooksList({ booksList, handleOnRemoveBook }) {
+export default function BooksList() {
+  const dispatch = useDispatch();
+  const bookList = useSelector((state) => state.books.bookList);
+
+  function handleOnRemove(book) {
+    dispatch(removeBook(book));
+  }
+
   return (
     <div className="book-list">
       <table>
@@ -15,8 +23,8 @@ export default function BooksList({ booksList, handleOnRemoveBook }) {
           </tr>
         </thead>
         <tbody>
-          {booksList.map((book) => (
-            <Book book={book} handleOnRemove={handleOnRemoveBook} key={`item${book + 1}`} />
+          {bookList.map((book, idx) => (
+            <Book book={book} onRemoveBook={handleOnRemove} key={`item${idx + 1}`} />
           ))}
         </tbody>
       </table>
@@ -24,7 +32,3 @@ export default function BooksList({ booksList, handleOnRemoveBook }) {
   );
 }
 
-BooksList.propTypes = {
-  booksList: PropTypes.arrayOf(PropTypes.object).isRequired,
-  handleOnRemoveBook: PropTypes.func.isRequired,
-};
