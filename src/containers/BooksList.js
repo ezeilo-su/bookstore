@@ -1,20 +1,28 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../actions/index';
+import { removeBook, changeFilter } from '../actions/index';
 import Book from '../components/Book';
-import '../styles/booklist.css';
+import '../styles/BooksList.css';
+import CategoryFilter from '../components/CategoryFilter';
 
 export default function BooksList() {
   const dispatch = useDispatch();
-  const bookList = useSelector((state) => state.books);
+  const filter = useSelector((state) => state.filter);
+  const bookList = (filter === 'All' ? useSelector((state) => state.books)
+    : useSelector((state) => state.books).filter((book) => book.category === filter));
 
   function handleOnRemove(book) {
     dispatch(removeBook(book));
   }
 
+  function handleFilterChange(filter) {
+    dispatch(changeFilter(filter));
+  }
+
   return (
     <div className="book-list">
       <h1>Book Store</h1>
+      <CategoryFilter changeFilter={handleFilterChange} />
       <table>
         <thead>
           <tr>

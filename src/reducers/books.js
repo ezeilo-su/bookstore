@@ -1,23 +1,23 @@
 const initialBookState = [
   {
     id: Math.floor(Math.random() * 100),
-    title: 'Trillion Dollar Coach',
-    category: 'Eric Schmidt',
+    title: 'A Game of Thrones',
+    category: 'Action',
   },
   {
     id: Math.floor(Math.random() * 100),
-    title: 'Learn Enough JavaScript',
-    category: 'Michael Hartl',
+    title: 'Nineteen Eighty-Four',
+    category: 'Sci-Fi',
   },
   {
     id: Math.floor(Math.random() * 100),
     title: 'JavaScript The Definitive Guide',
-    category: 'David Flanagan',
+    category: 'Learning',
   },
   {
     id: Math.floor(Math.random() * 100),
-    title: 'Learn Enough Ruby on Rails',
-    category: 'Michael Hartl',
+    title: 'Harry Potter',
+    category: 'Action',
   },
 ];
 
