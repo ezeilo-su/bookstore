@@ -1,18 +1,24 @@
-# Bookstore CMS
+# Bookstore CMS - React-Redux App
 
-In this milestone, I completed the following tasks:
+![main page](src/screenshot.png)
 
-- Create ```container``` components: ```BooksList``` and ```BooksForm```.
+##### In this milestone, I completed the following tasks:
 
-- Create ```presentational``` components: ```App``` and ```Book```.
+- Add a new ```presentational``` component: ```CategoryFilter```.
 
-- Create Redux ```actions``` and ```reducers```: ```CREATE_BOOK``` and ```REMOVE_BOOK```.
+- Create the ```CHANGE_FILTER``` action in ```actions/index.js```.
 
-- Connect the ```App``` Components to redux store.
+- Create a ```filter.js``` reducer which modifies ```filter``` in the Redux store.
 
-- Render ```BookForm``` and ```BookList``` components in the root component (App).
+- Implement the ```CategoryFilter``` component.
 
-- Deploy the App on Heroku.
+- Render the ```CategoryFilter``` component in the ```BooksList``` component.
+
+- Implement the ```handleFilterChange``` method which modifies the filter state in the Redux store.
+
+- Implement a conditional method that decides which books should be shown in the table depending on the ```filter``` value from the Redux store.
+
+- Deploy the app on Heroku.
 
 
 ## 📝 Setup
