@@ -19,6 +19,10 @@ td.remove-book {
 
 .book-details {
   width: 40%;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4386bf;
+  font-family: RobotoSlab, sans-serif;
 }
 
 .book-details p {
@@ -47,26 +51,14 @@ td.remove-book {
   width: 107px;
   height: 19px;
   margin: 4px 0 0;
-  font-size: 14px;
-  font-weight: 300;
-  color: #4386bf;
-  font-family: RobotoSlab, sans-serif;
 }
 
 .comment-remove-edit {
   width: 60%;
   height: 19px;
-  font-size: 14px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: RobotoSlab, sans-serif;
 }
 
 .comments {
