@@ -22,22 +22,10 @@ export default function BooksList() {
 
   return (
     <div className="book-list">
-      <h1>Book Store</h1>
       <CategoryFilter changeFilter={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book Id</th>
-            <th>Title</th>
-            <th colSpan="2">Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {fetchBook().map((book, idx) => (
-            <Book book={book} onRemoveBook={handleOnRemove} key={`item${idx + 1}`} />
-          ))}
-        </tbody>
-      </table>
+      {fetchBook().map((book, idx) => (
+        <Book book={book} onRemoveBook={handleOnRemove} key={`item${idx + 1}`} />
+      ))}
     </div>
   );
 }
