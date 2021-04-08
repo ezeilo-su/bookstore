@@ -9,11 +9,9 @@ export default function Book({ book, onRemoveBook }) {
         <h4 className="category-heading">{book.category}</h4>
         <h2 className="book-title">{book.title}</h2>
         <p className="book-author">Author</p>
-        <div className="comment-remove-edit">
-          <p className="comments">Comment</p>
-          <button className="remove-btn" type="button" onClick={() => onRemoveBook(book)}>Remove</button>
-          <p className="edit">Edit</p>
-        </div>
+        <p className="comments">Comment</p>
+        <button className="remove-btn" type="button" onClick={() => onRemoveBook(book)}>Remove</button>
+        <p className="edit">Edit</p>
       </div>
       <div className="progress-stat">
         <div className="progress" />
@@ -24,7 +22,7 @@ export default function Book({ book, onRemoveBook }) {
           <p>Completed</p>
         </div>
       </div>
-      <div className="chapter-container ">
+      <div className="chapter-container">
         <h4 className="chapter">CURRENT CHAPTER</h4>
         <p className="chapter-title">CHAPTER 10: &quot;The story of life&quot;</p>
         <button type="submit" className="update-progress">UPDATE PROGRESS</button>
