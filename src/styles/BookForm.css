@@ -1,0 +1,49 @@
+.book-form {
+  margin-top: 20px;
+}
+
+.book-form h3 {
+  margin-top: 29px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+  font-family: Montserrat, sans-serif;
+}
+
+#new-book-form {
+  width: 100%;
+}
+
+#new-book-form input {
+  width: 40%;
+  height: 45px;
+  margin: 19px 34px 0 0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+}
+
+#new-book-form select {
+  width: 25%;
+  height: 45px;
+  margin: 19px 34px 0 0;
+  padding: 6px 15px 9px 16px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+}
+
+#new-book-form button {
+  width: 20%;
+  height: 45px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  background-color: #0290ff;
+  font-family: RobotoSlab, sans-serif;
+}
