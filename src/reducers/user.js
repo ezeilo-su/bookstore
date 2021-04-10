@@ -1,9 +1,3 @@
-import {
-  fetchUsersRequest,
-  fetchUsersSuccess,
-  fetchUsersFailure,
-} from '../actions/index';
-
 const initialState = {
   loading: false,
   users: [],
@@ -25,7 +19,7 @@ const userReducer = (state = initialState, { type, payload }) => {
         error: '',
       };
 
-    case 'FETCH_USER_FAILURE':
+    case 'FETCH_USERS_FAILURE':
       return {
         loading: false,
         users: '',
