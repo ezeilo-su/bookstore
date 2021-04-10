@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function Post() {
-  const [posts, setPosts] = useState([]);
+  const [post, setPost] = useState({});
+  const [id, setId] = useState(1);
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
+    axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((res) => {
         console.log(res);
-        setPosts(res.data);
+        setPost(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -15,15 +16,14 @@ export default function Post() {
     return () => {
       // cleanup
     };
-  }, []); // [] => dependency list - allows the callback fn passed
+  }, [post]); // [] => dependency list - allows the callback fn passed
   // to useEffect to run only once on component mount
 
   return (
     <div>
+      <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
       <ul>
-        {
-          posts.map((post) => <li key={post.id}>{post.title}</li>)
-        }
+        <li>{post.title}</li>
       </ul>
     </div>
   );
