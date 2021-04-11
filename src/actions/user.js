@@ -14,15 +14,14 @@ const fetchUsersFailure = (error) => ({
   payload: error,
 });
 
-const fetchUsers = () => (dispatch) => {
+const fetchUsers = () => async (dispatch) => {
   dispatch(fetchUsersRequest);
-  axios.get('https://jsonplaceholder.typicode.com/users')
-    .then(((res) => {
-      const users = res.data;
-      dispatch(fetchUsersSuccess(users));
-    }))
-    .catch((err) => {
-      dispatch(fetchUsersFailure(err.message));
-    });
+  try {
+    const { data: users } = await axios.get('https://jsonplaceholder.typicode.com/users');
+    dispatch(fetchUsersSuccess(users));
+  } catch (err) {
+    dispatch(fetchUsersFailure(err.message));
+  }
 };
+
 export default fetchUsers;

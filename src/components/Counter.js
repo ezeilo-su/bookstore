@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { asyncCountFunction } from '../actions/index';
 
@@ -7,7 +7,7 @@ const Counter = () => {
   const count = useSelector((state) => state.count);
 
   useEffect(() => {
-    dispatch(asyncCountFunction(count));
+    dispatch(asyncCountFunction());
     return () => {
       // cleanup
     };

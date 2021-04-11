@@ -7,7 +7,7 @@ const User = () => {
   const userData = useSelector((state) => state.user);
 
   useEffect(() => {
-    dispatch(fetchUsers(userData));
+    dispatch(fetchUsers());
     return () => {
       // cleanup
     };
